@@ -1,0 +1,650 @@
+<!DOCTYPE html><html xmlns:og="http://ogp.me/ns#"><head><meta charset="UTF-8" /><title>Flutter Advent Calendar 2018 - Qiita</title><meta content="width=device-width,initial-scale=1" name="viewport" /><meta content="去年は[Dart Advent Calendar 2017](https://qiita.com/advent-calendar/2017/dart)に含まれていたFlutterですが、[Release Preview 2まで進んで](https://developers.googleblog.com/2018/09/flutter-release-preview-2-pixel-perfect.html)来年の1.0リリースに向けて順調ですし、人気もかなり出てきて盛り..." name="description" /><meta content="#55c500" name="theme-color" /><meta content="summary" name="twitter:card" /><meta content="@Qiita" name="twitter:site" /><meta content="Flutter Advent Calendar 2018 - Qiita" property="og:title" /><meta content="article" property="og:type" /><meta content="https://qiita.com/advent-calendar/2018/flutter" property="og:url" /><meta content="https://cdn.qiita.com/assets/qiita-fb-2887e7b4aad86fd8c25cea84846f2236.png" property="og:image" /><meta content="去年は[Dart Advent Calendar 2017](https://qiita.com/advent-calendar/2017/dart)に含まれていたFlutterですが、[Release Preview 2まで進んで](https://developers.googleblog.com/2018/09/flutter-release-preview-2-pixel-perfect.html)来年の1.0リリースに向けて順調ですし、人気もかなり出てきて盛り..." property="og:description" /><meta content="Qiita" property="og:site_name" /><meta content="564524038" property="fb:admins" /><link rel="canonical" href="https://qiita.com/advent-calendar/2018/flutter" /><link rel="shortcut icon" type="image/x-icon" href="https://cdn.qiita.com/assets/favicons/public/production.ico" /><link rel="apple-touch-icon" type="image/png" href="https://cdn.qiita.com/assets/favicons/public/apple-touch-icon-f9a6afad761ec2306e10db2736187c8b.png" /><link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://qiita.com/advent-calendar/2018/flutter/feed" /><link href="/opensearch.xml" rel="search" title="Qiita" type="application/opensearchdescription+xml" /><link rel="stylesheet" media="all" href="https://cdn.qiita.com/assets/public-f7a1573d8ac5d716970843e4cf66eed3.min.css" /><meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="gEwSBUmmtDvlsQnb5M+RbO9SKqKSTswePfhCxwwfrH/lMTmYdQAdupjwsZGYEr69cHcsy2k8mG70Cmm47YGJCg==" /><script>
+      window.gtmDataLayer = [
+        {
+          'analytics.dimension5': 'false',
+          'app.env': 'production',
+          'app.layoutVersion': 1,
+          'app.userId': null
+        },
+        { 'gtm.start': new Date().getTime(), event: 'gtm.js' }
+      ];
+    </script>
+    <script src="https://www.googletagmanager.com/gtm.js?id=GTM-TBQWPN&l=gtmDataLayer" async></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-935296116"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-935296116');
+      
+      // Event snippet for qiita remarketing page
+      gtag('event', 'conversion', {
+          'send_to': 'AW-935296116/jvRhCOaj5YYBEPT4_b0D',
+          'value': 1.0,
+          'currency': 'JPY',
+          'aw_remarketing_only': true
+      });
+    </script><script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-878053044"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-878053044');
+    </script><script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script>
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      googletag.cmd.push(function() {
+        googletag.defineSlot('/383564218/p_qiita_336x280_adventcalendar', [[336, 280], [300, 250]], 'div-gpt-ad-1511334036971-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+      });
+    </script></head><body class="without-js" id="">
+    <noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-TBQWPN" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+    <script>
+      document.body.className = document.body.className.replace('without-js', '') + ' with-js';
+      window.Qiita = {"asset_host":"cdn.qiita.com","TLD":"com","controller_path":"public/advent_calendar/calendars","controller_action":"public/advent_calendar/calendars#show","controller":"calendars","action":"show","action_path":"public/advent_calendar/calendars#show","env":"production","flash":{},"is_team_page":false,"request_parameters":{"controller":"public/advent_calendar/calendars","action":"show","year":"2018","id":"flutter"},"root_domain":"qiita.com","variant":null,"config":{"mixpanel":{"per_team":"c0a2116368b33b44b5029ebd2cc9b094","public":"17d24b448ca579c365d2d1057f3a1791","team":"b7c0342acba2dbc8742484d98788efb3"},"default_locale":"en","locale":"en"},"team":null,"user":null,"GIT_BRANCH":null,"DEBUG":false};
+    </script>
+    <div class="st-HeaderContainer"><script type="application/json" id="js-react-on-rails-context">
+        {}
+      </script>
+      <div id="GlobalHeaderContainer-react-component-5d24f251-6a93-4ee9-b55d-b87af8d5fdb5"></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="GlobalHeaderContainer" data-dom-id="GlobalHeaderContainer-react-component-5d24f251-6a93-4ee9-b55d-b87af8d5fdb5">
+        {"user":null,"realms":[{"human_name":"Qiita","is_current_realm":true,"is_qiita":true,"is_qiita_team":false,"logged_in_user":null,"team_id":null,"url":"https://qiita.com/"}],"teamFindUrl":"https://teams-center.qiita.com/find_team","unreadNotificationsCount":null,"locale":"en","is_fluid":false,"is_staff":false}
+      </script>
+    </div>
+    <div class="st-HeaderAlert st-HeaderAlert-warning">
+      <div class="st-HeaderAlert_body"></div>
+    </div>
+    <div id="main">
+      <div class="adventCalendarBreadcrumb">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <ol class="breadcrumb">
+                <li><a href="/advent-calendar">Advent Calendar</a></li>
+                <li><a href="/advent-calendar/2018">2018</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="adventCalendarJumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="adventCalendarJumbotron_headers">
+                <h1 class="adventCalendarJumbotron_heading">Flutter Advent Calendar 2018</h1>
+                <div class="adventCalendarJumbotron_meta">
+                  <div class="adventCalendarJumbotron_metaItem">
+                    <div class="adventCalendarJumbotron_stats" data-toggle="tooltip" title="Participants"><i class="fa fa-user"></i> 20</div>
+                  </div>
+                  <div class="adventCalendarJumbotron_metaItem">
+                    <div class="adventCalendarJumbotron_stats" data-toggle="tooltip" title="Likes"><i class="fa fa-thumbs-up"></i> 414</div>
+                  </div>
+                  <div class="adventCalendarJumbotron_metaItem">
+                    <div class="adventCalendarJumbotron_stats" data-toggle="tooltip" title="Subscribers"><i class="fa fa-star"></i> 175</div>
+                  </div>
+                  <div class="adventCalendarJumbotron_metaItem"><a data-toggle="tooltip" title="RSS" target="_blank" class="adventCalendarJumbotron_rss" href="/advent-calendar/2018/flutter/feed"><i class="fa fa-rss adventCalendarJumbotron_rssIcon"></i></a></div>
+                  <div class="adventCalendarJumbotron_metaItem">
+                    <div class="adventCalendarSubscriptionButton"><i class="fa fa-star-o"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container adventCalendarSection">
+        <div class="row">
+          <div class="col-md-8 col-sm-12">
+            <article>
+              <div class="markdownContent">
+                <p>去年は<a href="https://qiita.com/advent-calendar/2017/dart">Dart Advent Calendar 2017</a>に含まれていたFlutterですが、<a href="https://developers.googleblog.com/2018/09/flutter-release-preview-2-pixel-perfect.html">Release Preview 2まで進んで</a>来年の1.0リリースに向けて順調ですし、人気もかなり出てきて盛り上がりを感じるので今年はFlutter独立させて良いのではと思いました。<br>
+                  ちなみに、最近<a href="https://github.com/flutter/flutter/stargazers">GitHub Starsが4万を超えました</a>🎉</p>
+                <hr>
+                <p>すぐに埋まってしまったのでその2も作りました: <a href="https://qiita.com/advent-calendar/2018/flutter-2" class="autolink">https://qiita.com/advent-calendar/2018/flutter-2</a></p>
+                <hr>
+                <ul>
+                  <li>Dart: <a href="https://qiita.com/advent-calendar/2018/dart">Dart Advent Calendar 2018 - Qiita</a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <hr />
+            <div class="adventCalendarSection_info">Category: 
+              <div class="label adventCalendarSection_categoryLabel-mobile"><a href="/advent-calendar/2018/categories/mobile">Mobile</a></div>
+            </div>
+            <div class="adventCalendarSection_info">Owner: <a href="/mono0926"><img alt="mono0926" src="https://qiita-image-store.s3.amazonaws.com/0/19398/profile-images/1473682701" width="18" height="18" /> mono0926</a></div>
+            <div class="adventCalendarSection_info">
+              <div class="adventCalendarSocialButtons">
+                <div class="adventCalendarSocialButtons_twitter adventCalendarSocialButtons_button"><a class="twitter-share-button" data-url="https://qiita.com/advent-calendar/2018/flutter" data-text="Flutter Advent Calendar 2018 #Qiita" href="https://twitter.com/share">Tweet</a></div>
+                <div class="adventCalendarSocialButtons_hatebu adventCalendarSocialButtons_button"><a class="hatena-bookmark-button" title="Add to Hatena Bookmark" data-hatena-bookmark-title="Flutter Advent Calendar 2018" data-hatena-bookmark-layout="simple-balloon" href="http://b.hatena.ne.jp/entry/https://qiita.com/advent-calendar/2018/flutter"><img alt="Add to Hatena Bookmark" height="20" src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" style="border: none;" width="20" /></a><script async="async" charset="utf-8" src="https://b.st-hatena.com/js/bookmark_button.js" type="text/javascript"></script></div>
+                <div class="adventCalendarSocialButtons_googlePlus adventCalendarSocialButtons_button">
+                  <div class="g-plusone" data-href="https://qiita.com/advent-calendar/2018/flutter" data-size="medium"></div>
+                </div>
+                <div class="adventCalendarSocialButtons_qiitadon adventCalendarSocialButtons_button"><a class="mastodonShareButton" href="https://qiitadon.com/share?text=Flutter+Advent+Calendar+2018+https%3A%2F%2Fqiita.com%2Fadvent-calendar%2F2018%2Fflutter+%23Qiita" target="_blank" title="Toot on Qiitadon">Toot</a></div>
+                <div class="adventCalendarSocialButtons_facebook adventCalendarSocialButtons_button">
+                  <div class="fb-like" data-href="https://qiita.com/advent-calendar/2018/flutter" data-layout="button_count" data-send="false" data-show-faces="false" data-width="100"></div>
+                </div>
+                <div class="adventCalendarSocialButtons_pocket adventCalendarSocialButtons_button"><a class="pocket-btn" data-lang="en" data-pocket-count="horizontal" data-pocket-label="pocket"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="adventCalendarSection_sponsor">
+              <div id="div-gpt-ad-1511334036971-0">
+                <h4 class="adventCalendarSection_sponsorHeading"><i class="fa fa-tree"></i> Calendar Sponsor PR</h4>
+              </div>
+              <script>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1511334036971-0'); });
+              </script></div>
+          </div>
+        </div>
+      </div>
+      <div class="container adventCalendarCalendar hidden-xs">
+        <div class="row">
+          <div class="col-sm-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="adventCalendarCalendar_dayName">Sun</th>
+                  <th class="adventCalendarCalendar_dayName">Mon</th>
+                  <th class="adventCalendarCalendar_dayName">Tue</th>
+                  <th class="adventCalendarCalendar_dayName">Wed</th>
+                  <th class="adventCalendarCalendar_dayName">Thu</th>
+                  <th class="adventCalendarCalendar_dayName">Fri</th>
+                  <th class="adventCalendarCalendar_dayName">Sat</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="adventCalendarCalendar_day-disabled">
+                    <p class="adventCalendarCalendar_date">25</p>
+                  </td>
+                  <td class="adventCalendarCalendar_day-disabled">
+                    <p class="adventCalendarCalendar_date">26</p>
+                  </td>
+                  <td class="adventCalendarCalendar_day-disabled">
+                    <p class="adventCalendarCalendar_date">27</p>
+                  </td>
+                  <td class="adventCalendarCalendar_day-disabled">
+                    <p class="adventCalendarCalendar_date">28</p>
+                  </td>
+                  <td class="adventCalendarCalendar_day-disabled">
+                    <p class="adventCalendarCalendar_date">29</p>
+                  </td>
+                  <td class="adventCalendarCalendar_day-disabled">
+                    <p class="adventCalendarCalendar_date">30</p>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">1</p>
+                    <div class="adventCalendarCalendar_author"><a href="/clay4649"><img alt="clay4649" class="adventCalendarCalendar_authorIcon" src="https://pbs.twimg.com/profile_images/1046771581572116483/cKQPkRyH_bigger.jpg" width="18" height="18" />&nbsp;clay4649</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/clay4649/items/0c36bb400a7af0b8e2d6">JS ? ReactNative × Redux ? ダサいよ... Flutter × Reduxにしましょう...</a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">2</p>
+                    <div class="adventCalendarCalendar_author"><a href="/superman9387"><img alt="superman9387" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/139360/profile-images/1514255586" width="18" height="18" />&nbsp;superman9387</a></div>
+                    <div class="adventCalendarCalendar_comment"><a target="_blank" rel="noopener noreferrer" href="https://www.shogogeek.com/entry/20181202/1543703400">Flutterをできるようになるためにやったことまとめ <span class="fa fa-external-link"></span></a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">3</p>
+                    <div class="adventCalendarCalendar_author"><a href="/nobuhito"><img alt="nobuhito" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/15745/profile-images/1473681672" width="18" height="18" />&nbsp;nobuhito</a></div>
+                    <div class="adventCalendarCalendar_comment"><a target="_blank" rel="noopener noreferrer" href="https://note.mu/nbht/n/n768920a8eb1c">Padding（またはMargin）だけが目的でContainerを使うのは間違ってる（というか分かりづらい） <span class="fa fa-external-link"></span></a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">4</p>
+                    <div class="adventCalendarCalendar_author"><a href="/superman9387"><img alt="superman9387" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/139360/profile-images/1514255586" width="18" height="18" />&nbsp;superman9387</a></div>
+                    <div class="adventCalendarCalendar_comment"><a target="_blank" rel="noopener noreferrer" href="https://www.shogogeek.com/entry/20181204/1543876200">Flutter製アプリ「GroupAlbum」で使ってるプラグイン全部晒します！！！！ <span class="fa fa-external-link"></span></a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">5</p>
+                    <div class="adventCalendarCalendar_author"><a href="/superman9387"><img alt="superman9387" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/139360/profile-images/1514255586" width="18" height="18" />&nbsp;superman9387</a></div>
+                    <div class="adventCalendarCalendar_comment"><a target="_blank" rel="noopener noreferrer" href="https://www.shogogeek.com/entry/20181205/1543960800">Flutterの好きなところを語る <span class="fa fa-external-link"></span></a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">6</p>
+                    <div class="adventCalendarCalendar_author"><a href="/aoinakanishi"><img alt="aoinakanishi" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/129712/profile-images/1525792972" width="18" height="18" />&nbsp;aoinakanishi</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/aoinakanishi/items/25f2526fc7c1fe8350c6">Google公式Flutter用Google Mapsプラグインを一通り使ってみた</a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">7</p>
+                    <div class="adventCalendarCalendar_author"><a href="/chigichan24"><img alt="chigichan24" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/176701/profile-images/1528617309" width="18" height="18" />&nbsp;chigichan24</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/chigichan24/items/89cb686e880f0274ed1c">flutter_blueで両OS対応のSDKを書いてみる</a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">8</p>
+                    <div class="adventCalendarCalendar_author"><a href="/shimopata"><img alt="shimopata" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/122004/profile-images/1517671348" width="18" height="18" />&nbsp;shimopata</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/shimopata/items/f158015d2893e2614c49">codemagicでFirebaseと連携したFlutterアプリをデプロイしてみる</a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">9</p>
+                    <div class="adventCalendarCalendar_author"><a href="/pco2699"><img alt="pco2699" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/125528/profile-images/1544341112" width="18" height="18" />&nbsp;pco2699</a></div>
+                    <div class="adventCalendarCalendar_comment"><a target="_blank" rel="noopener noreferrer" href="https://blog.pco2699.net/entry/2018/12/09/203408">flutterとFirebase Cloud Messagingを連携させて通知専用アプリをサクッとつくる <span class="fa fa-external-link"></span></a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">10</p>
+                    <div class="adventCalendarCalendar_author"><a href="/kikuchy"><img alt="kikuchy" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/41896/profile-images/1473688961" width="18" height="18" />&nbsp;kikuchy</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/kikuchy/items/397b7664ad32656748bf">Flutterの最後の秘宝、Platform Viewの実装を調べに行く</a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">11</p>
+                    <div class="adventCalendarCalendar_author"><a href="/aoinakanishi"><img alt="aoinakanishi" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/129712/profile-images/1525792972" width="18" height="18" />&nbsp;aoinakanishi</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/aoinakanishi/items/e58e7dd537ca1d1b76d6">Google公式Flutter用WebViewプラグインを一通り使ってみた</a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">12</p>
+                    <div class="adventCalendarCalendar_author"><a href="/azihsoyn"><img alt="azihsoyn" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/14577/profile-images/1477545988" width="18" height="18" />&nbsp;azihsoyn</a></div>
+                    <div class="adventCalendarCalendar_comment"><a target="_blank" rel="noopener noreferrer" href="https://azihsoyn.hatenablog.com/entry/flutter-advent-calendar-2018-day12">ネイティブpluginの作り方? <span class="fa fa-external-link"></span></a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">13</p>
+                    <div class="adventCalendarCalendar_author"><a href="/superman9387"><img alt="superman9387" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/139360/profile-images/1514255586" width="18" height="18" />&nbsp;superman9387</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/superman9387/items/a605b6b5690aaa746376">Flutter 1.0がリリースされたので概要から、環境構築、実装方法、アーキテクチャ、情報収集方法まで全部書く</a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">14</p>
+                    <div class="adventCalendarCalendar_author"><a href="/benridane"><img alt="benridane" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/104300/profile-images/1473709257" width="18" height="18" />&nbsp;benridane</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/benridane/items/3263ed9d1f4d1cfb9a4a">flutterを１からインストール</a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">15</p>
+                    <div class="adventCalendarCalendar_author"><a href="/aoinakanishi"><img alt="aoinakanishi" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/129712/profile-images/1525792972" width="18" height="18" />&nbsp;aoinakanishi</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/aoinakanishi/items/fbcf122ab7cf13f66037">Flutter × Flareで無料で簡単にアニメーションを作る</a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">16</p>
+                    <div class="adventCalendarCalendar_author"><a href="/kwmt@github"><img alt="kwmt@github" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/22161/profile-images/1473683511" width="18" height="18" />&nbsp;kwmt@github</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/kwmt@github/items/2e81b46d62beb091d18b">Flutter製チャットアプリを支える技術</a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">17</p>
+                    <div class="adventCalendarCalendar_author"><a href="/Nimimal"><img alt="Nimimal" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/16455/profile-images/1482447325" width="18" height="18" />&nbsp;Nimimal</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/Nimimal/items/87d4faf52fdfb99b0941">新世代のクロスプラットフォーム開発を可能とするFlutter1.0のコードに、ドメイン駆動開発の実践を学ぶ。</a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">18</p>
+                    <div class="adventCalendarCalendar_author"><a href="/kts0226"><img alt="kts0226" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/122822/profile-images/1473715359" width="18" height="18" />&nbsp;kts0226</a></div>
+                    <div class="adventCalendarCalendar_comment">flutterのなにか</div>
+                    <div class="adventCalendarCalendar_leave"><a class="btn btn-default btn-sm btn-block" data-toggle="tooltip" data-placement="top" title="Overwritable because of past due" href="/advent-calendar/2018/flutter/day/18/edit">Overwrite</a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">19</p>
+                    <div class="adventCalendarCalendar_author"><a href="/sekitaka_1214"><img alt="sekitaka_1214" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/18273/profile-images/1480982459" width="18" height="18" />&nbsp;sekitaka_1214</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/sekitaka_1214/items/129f41c2fbb1dc05b5c3">[Flutter] DartのclassとFirestoreデータを相互変換、そしてCRUDへ</a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">20</p>
+                    <div class="adventCalendarCalendar_author"><a href="/rkowase"><img alt="rkowase" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/123122/profile-images/1474288386" width="18" height="18" />&nbsp;rkowase</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/rkowase/items/f397513f2149a41b6dd2">【Flutter】JSONをデコードする</a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">21</p>
+                    <div class="adventCalendarCalendar_author"><a href="/t-kashima"><img alt="t-kashima" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/9950/profile-images/1473681599" width="18" height="18" />&nbsp;t-kashima</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/t-kashima/items/f825f7b91b850a3563a9">既存のアプリからFlutterを呼び出す</a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">22</p>
+                    <div class="adventCalendarCalendar_author"><a href="/ko2ic"><img alt="ko2ic" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/10494/profile-images/1473681724" width="18" height="18" />&nbsp;ko2ic</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/ko2ic/items/2a0aa4301011f8f52275">Flutterで1年間開発して利用した使えるライブラリ</a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">23</p>
+                    <div class="adventCalendarCalendar_author"><a href="/nabeen"><img alt="nabeen" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/44007/profile-images/1537528298" width="18" height="18" />&nbsp;nabeen</a></div>
+                    <div class="adventCalendarCalendar_comment">開発案件はポシャったけどその時の知見を書く</div>
+                    <div class="adventCalendarCalendar_leave"><a class="btn btn-default btn-sm btn-block" data-toggle="tooltip" data-placement="top" title="Overwritable because of past due" href="/advent-calendar/2018/flutter/day/23/edit">Overwrite</a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">24</p>
+                    <div class="adventCalendarCalendar_author"><a href="/kabochapo"><img alt="kabochapo" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/132102/profile-images/1544421088" width="18" height="18" />&nbsp;kabochapo</a></div>
+                    <div class="adventCalendarCalendar_comment"><a href="https://qiita.com/kabochapo/items/2b992cc00e9f464c1ea9">BLoCパターンの問題点とScoped Modelとの比較</a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day">
+                    <p class="adventCalendarCalendar_date">25</p>
+                    <div class="adventCalendarCalendar_author"><a href="/mono0926"><img alt="mono0926" class="adventCalendarCalendar_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/19398/profile-images/1473682701" width="18" height="18" />&nbsp;mono0926</a></div>
+                    <div class="adventCalendarCalendar_comment"><a target="_blank" rel="noopener noreferrer" href="https://medium.com/flutter-jp/bloc-provider-70e869b11b2f">FlutterのBLoC(Business Logic Component)のライフサイクルを正確に管理して提供するProviderパッケージの解説 <span class="fa fa-external-link"></span></a></div>
+                  </td>
+                  <td class="adventCalendarCalendar_day-disabled">
+                    <p class="adventCalendarCalendar_date">26</p>
+                  </td>
+                  <td class="adventCalendarCalendar_day-disabled">
+                    <p class="adventCalendarCalendar_date">27</p>
+                  </td>
+                  <td class="adventCalendarCalendar_day-disabled">
+                    <p class="adventCalendarCalendar_date">28</p>
+                  </td>
+                  <td class="adventCalendarCalendar_day-disabled">
+                    <p class="adventCalendarCalendar_date">29</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="adventCalendarSection">
+        <div class="container">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 1</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/clay4649"><img alt="clay4649" class="adventCalendarItem_authorIcon" src="https://pbs.twimg.com/profile_images/1046771581572116483/cKQPkRyH_bigger.jpg" width="18" height="18" /> clay4649</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/clay4649/items/0c36bb400a7af0b8e2d6">JS ? ReactNative × Redux ? ダサいよ... Flutter × Reduxにしましょう...</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 2</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/superman9387"><img alt="superman9387" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/139360/profile-images/1514255586" width="18" height="18" /> superman9387</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a target="_blank" rel="noopener noreferrer" href="https://www.shogogeek.com/entry/20181202/1543703400">Flutterをできるようになるためにやったことまとめ <i class="fa fa-external-link"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 3</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/nobuhito"><img alt="nobuhito" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/15745/profile-images/1473681672" width="18" height="18" /> nobuhito</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a target="_blank" rel="noopener noreferrer" href="https://note.mu/nbht/n/n768920a8eb1c">Padding（またはMargin）だけが目的でContainerを使うのは間違ってる（というか分かりづらい） <i class="fa fa-external-link"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 4</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/superman9387"><img alt="superman9387" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/139360/profile-images/1514255586" width="18" height="18" /> superman9387</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a target="_blank" rel="noopener noreferrer" href="https://www.shogogeek.com/entry/20181204/1543876200">Flutter製アプリ「GroupAlbum」で使ってるプラグイン全部晒します！！！！ <i class="fa fa-external-link"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 5</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/superman9387"><img alt="superman9387" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/139360/profile-images/1514255586" width="18" height="18" /> superman9387</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a target="_blank" rel="noopener noreferrer" href="https://www.shogogeek.com/entry/20181205/1543960800">Flutterの好きなところを語る <i class="fa fa-external-link"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 6</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/aoinakanishi"><img alt="aoinakanishi" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/129712/profile-images/1525792972" width="18" height="18" /> aoinakanishi</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/aoinakanishi/items/25f2526fc7c1fe8350c6">Google公式Flutter用Google Mapsプラグインを一通り使ってみた</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 7</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/chigichan24"><img alt="chigichan24" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/176701/profile-images/1528617309" width="18" height="18" /> chigichan24</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/chigichan24/items/89cb686e880f0274ed1c">flutter_blueで両OS対応のSDKを書いてみる</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 8</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/shimopata"><img alt="shimopata" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/122004/profile-images/1517671348" width="18" height="18" /> shimopata</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/shimopata/items/f158015d2893e2614c49">codemagicでFirebaseと連携したFlutterアプリをデプロイしてみる</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 9</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/pco2699"><img alt="pco2699" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/125528/profile-images/1544341112" width="18" height="18" /> pco2699</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a target="_blank" rel="noopener noreferrer" href="https://blog.pco2699.net/entry/2018/12/09/203408">flutterとFirebase Cloud Messagingを連携させて通知専用アプリをサクッとつくる <i class="fa fa-external-link"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 10</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/kikuchy"><img alt="kikuchy" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/41896/profile-images/1473688961" width="18" height="18" /> kikuchy</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/kikuchy/items/397b7664ad32656748bf">Flutterの最後の秘宝、Platform Viewの実装を調べに行く</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 11</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/aoinakanishi"><img alt="aoinakanishi" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/129712/profile-images/1525792972" width="18" height="18" /> aoinakanishi</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/aoinakanishi/items/e58e7dd537ca1d1b76d6">Google公式Flutter用WebViewプラグインを一通り使ってみた</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 12</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/azihsoyn"><img alt="azihsoyn" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/14577/profile-images/1477545988" width="18" height="18" /> azihsoyn</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a target="_blank" rel="noopener noreferrer" href="https://azihsoyn.hatenablog.com/entry/flutter-advent-calendar-2018-day12">ネイティブpluginの作り方? <i class="fa fa-external-link"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 13</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/superman9387"><img alt="superman9387" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/139360/profile-images/1514255586" width="18" height="18" /> superman9387</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/superman9387/items/a605b6b5690aaa746376">Flutter 1.0がリリースされたので概要から、環境構築、実装方法、アーキテクチャ、情報収集方法まで全部書く</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 14</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/benridane"><img alt="benridane" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/104300/profile-images/1473709257" width="18" height="18" /> benridane</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/benridane/items/3263ed9d1f4d1cfb9a4a">flutterを１からインストール</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 15</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/aoinakanishi"><img alt="aoinakanishi" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/129712/profile-images/1525792972" width="18" height="18" /> aoinakanishi</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/aoinakanishi/items/fbcf122ab7cf13f66037">Flutter × Flareで無料で簡単にアニメーションを作る</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 16</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/kwmt@github"><img alt="kwmt@github" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/22161/profile-images/1473683511" width="18" height="18" /> kwmt@github</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/kwmt@github/items/2e81b46d62beb091d18b">Flutter製チャットアプリを支える技術</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 17</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/Nimimal"><img alt="Nimimal" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/16455/profile-images/1482447325" width="18" height="18" /> Nimimal</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/Nimimal/items/87d4faf52fdfb99b0941">新世代のクロスプラットフォーム開発を可能とするFlutter1.0のコードに、ドメイン駆動開発の実践を学ぶ。</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 18</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/kts0226"><img alt="kts0226" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/122822/profile-images/1473715359" width="18" height="18" /> kts0226</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_comment">flutterのなにか</div>
+                  <div class="adventCalendarItem_cancelButton"><a class="btn btn-default btn-sm btn-block" data-toggle="tooltip" data-placement="top" title="Overwritable because of past due" href="/advent-calendar/2018/flutter/day/18/edit">Overwrite</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 19</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/sekitaka_1214"><img alt="sekitaka_1214" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/18273/profile-images/1480982459" width="18" height="18" /> sekitaka_1214</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/sekitaka_1214/items/129f41c2fbb1dc05b5c3">[Flutter] DartのclassとFirestoreデータを相互変換、そしてCRUDへ</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 20</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/rkowase"><img alt="rkowase" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/123122/profile-images/1474288386" width="18" height="18" /> rkowase</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/rkowase/items/f397513f2149a41b6dd2">【Flutter】JSONをデコードする</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 21</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/t-kashima"><img alt="t-kashima" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/9950/profile-images/1473681599" width="18" height="18" /> t-kashima</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/t-kashima/items/f825f7b91b850a3563a9">既存のアプリからFlutterを呼び出す</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 22</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/ko2ic"><img alt="ko2ic" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/10494/profile-images/1473681724" width="18" height="18" /> ko2ic</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/ko2ic/items/2a0aa4301011f8f52275">Flutterで1年間開発して利用した使えるライブラリ</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 23</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/nabeen"><img alt="nabeen" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/44007/profile-images/1537528298" width="18" height="18" /> nabeen</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_comment">開発案件はポシャったけどその時の知見を書く</div>
+                  <div class="adventCalendarItem_cancelButton"><a class="btn btn-default btn-sm btn-block" data-toggle="tooltip" data-placement="top" title="Overwritable because of past due" href="/advent-calendar/2018/flutter/day/23/edit">Overwrite</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 24</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/kabochapo"><img alt="kabochapo" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/132102/profile-images/1544421088" width="18" height="18" /> kabochapo</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a href="https://qiita.com/kabochapo/items/2b992cc00e9f464c1ea9">BLoCパターンの問題点とScoped Modelとの比較</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="adventCalendarItem">
+              <div class="adventCalendarItem_date">12 / 25</div>
+              <div class="adventCalendarItem_calendarContent"><a class="adventCalendarItem_author" href="/mono0926"><img alt="mono0926" class="adventCalendarItem_authorIcon" src="https://qiita-image-store.s3.amazonaws.com/0/19398/profile-images/1473682701" width="18" height="18" /> mono0926</a>
+                <div class="adventCalendarItem_commentWrapper">
+                  <div class="adventCalendarItem_entry"><a target="_blank" rel="noopener noreferrer" href="https://medium.com/flutter-jp/bloc-provider-70e869b11b2f">FlutterのBLoC(Business Logic Component)のライフサイクルを正確に管理して提供するProviderパッケージの解説 <i class="fa fa-external-link"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer_inner">
+        <div class="footer_container">
+          <ul class="footer_links-left">
+            <li class="footer_link"><a class="footer_copyright" href="http://increments.co.jp">© 2011-2018 Increments Inc.</a></li>
+            <li class="footer_link"><a href="https://qiita.com/terms">Terms</a></li>
+            <li class="footer_link"><a target="_blank" href="http://help.qiita.com/ja/articles/qiita-community-guideline">Guideline</a></li>
+            <li class="footer_link"><a href="https://qiita.com/privacy">Privacy</a></li>
+            <li class="footer_link"><a href="https://help.qiita.com">Help</a></li>
+          </ul>
+          <ul class="footer_links-right">
+            <li class="footer_link"><a href="https://qiita.com/about">About</a></li>
+            <li class="footer_link"><a href="/users">Users</a></li>
+            <li class="footer_link"><a href="/tags">Tags</a></li>
+            <li class="footer_link"><a href="/items">Items</a></li>
+            <li class="footer_link"><a href="https://blog.qiita.com">Blog</a></li>
+            <li class="footer_link"><a href="https://qiita.com/api/v2/docs">API</a></li>
+            <li class="footer_link"><a href="https://teams.qiita.com/">Team</a></li>
+            <li class="footer_link"><a class="js-public-form-feedback-link" data-target=".js-feedback-form" data-toggle="modal" href=""><i class="fa fa-heart"></i> Feedback <i class="fa fa-caret-down"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="js-feedback-form modal fade feedbackForm">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"><button name="button" type="submit" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Feedback</h4>
+          </div>
+          <div class="modal-body">
+            <form class="js-feedback-form-form" action="/feedbacks" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="IKuMGAkiMf+cFSXAK8Oq5wDh/V9fMaEgUIPwHuv4ElmReh1TFYTqSor9QMnK5THUT5J690D8s66rt690uCjkeA==" /><input type="hidden" name="redirect_path" id="redirect_path" value="/advent-calendar/2018/flutter" />
+              <div class="form-group">
+                <textarea name="feedback[message]" id="feedback_message" class="form-control js-feedback-form-text-area" placeholder="Please give us any feedback about Qiita." required="required" rows="5">
+</textarea>
+              </div>
+              <div class="feedbackForm_submitButtonContainer"><button name="button" type="submit" class="btn btn-primary feedbackForm_submitButton"><i class="fa fa-send"></i> Submit</button>
+                <p class="feedbackForm_note">We don&#39;t reply to any feedback.<br />
+                  If you need help with Qiita, please send a support request from <a href="https://increments.zendesk.com/hc/ja/requests/new">here</a>.</p>
+              </div>
+              <div style="position:fixed;top:-99999px;opacity:0.0001;"><input name="feedback[name]" type="text" /></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // if (window.mixpanel instanceof Element) {
+      //   window.mixpanel = [];
+      // }
+      // (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+      // for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+    </script><script src="https://cdn.qiita.com/assets/public-6bf69a7004834a654e020ef713ac2a95.min.js"></script><script>
+      /* <![CDATA[ */
+      var yahoo_retargeting_id = '6B63B2EQA6';
+      var yahoo_retargeting_label = 'qiita';
+      var yahoo_retargeting_page_type = '';
+      var yahoo_retargeting_items = [{item_id: '', category_id: '', price: '', quantity: ''}];
+      /* ]]> */
+    </script><script language="javascript" src="https://b92.yahoo.co.jp/js/s_retargeting.js" type="text/javascript"></script><script src="//platform.twitter.com/oct.js" type="text/javascript"></script><script>
+      twttr.conversion.trackPid('nzz0o', { tw_sale_amount: 0, tw_order_quantity: 0 });
+    </script>
+    <noscript><img alt="" height="1" src="https://analytics.twitter.com/i/adsct?txn_id=nzz0o&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0" style="display:none;" width="1" /><img alt="" height="1" src="//t.co/i/adsct?txn_id=nzz0o&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0" style="display:none;" width="1" /></noscript>
+  </body></html>
